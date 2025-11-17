@@ -13,8 +13,9 @@ public class Biblioteca {
 
     public Pubblicazione prendiPrestito(String t){
        Libro l = null;
-       if(cercaLibro(t) instanceof Libro){
-           l = (Libro) cercaLibro(t);
+       Pubblicazione p = cercaLibro(t);
+       if(p instanceof Libro){
+           l = (Libro)(p);
        }
        return l;
     }
