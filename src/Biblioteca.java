@@ -12,7 +12,11 @@ public class Biblioteca {
     }
 
     public Pubblicazione prendiPrestito(String t){
-        return cercaLibro(t);
+       Libro l = null;
+       if(cercaLibro(t) instanceof Libro){
+           l = (Libro) cercaLibro(t);
+       }
+       return l;
     }
 
     private Pubblicazione cercaLibro(String L) {
